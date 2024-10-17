@@ -1,6 +1,6 @@
 ---
 title: Cyber Security Club @ OSU
-description: Welcome to the Cyber Security Club at Oregon State University! We are a student organization dedicated to learning about and practicing cyber security.
+description: Welcome to the Cyber Security Club at Ohio State University! We are a student organization dedicated to learning about and practicing cyber security.
 ---
 
 <div style="text-align: center;">
