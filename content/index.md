@@ -11,7 +11,7 @@ description: Welcome to the Cyber Security Club at Ohio State University! We are
   <p style="font-weight: bold; font-size: 25pt;">
     <a href="/Meeting-Schedule/AU24">Meetings</a> |
     <a href="/Bootcamp-CTF/">Bootcamp</a> | 
-    <a href="/resources/">General Resources</a>
+    <a href="/resources/">Resources</a>
   </p>
 
   <p style="font-weight: bold; font-size: 25pt;">
