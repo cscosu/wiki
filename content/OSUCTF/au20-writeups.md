@@ -223,7 +223,7 @@ Challenge: authbot
 Write-Up Author: ctf-user-077
 Authbot by WCSC
 
-For this challenge, you need to connect to the Buckeye CTF and message the authbot. Send authbot the $help, as the challenge description hints at. This will bring up a list of commands, including the $info command. Running the $info command will print out a link to the github page for the bot.  https://github.com/qxxxb/auth_bot
+For this challenge, you need to connect to the Buckeye CTF and message the authbot. Send authbot the `$help`, as the challenge description hints at. This will bring up a list of commands, including the `$info` command. Running the `$info` command will print out a link to the github page for the bot.  https://github.com/qxxxb/auth_bot
 
 If you visit that site, you can read the source code for the bot. In particular, there is one interesting function: cmd_debug_log. This command was not listed in the help section. Running it reveals the following output: 
 
@@ -233,7 +233,7 @@ If you visit that site, you can read the source code for the bot. In particular,
     2020-10-24 00:05:53 DEBUG    User tips48#3559 authed as admin with password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
     2020-10-24 00:07:23 DEBUG    User tips48#3559 authed as admin with password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
 
-Whoops, looks like they were logging password hashes, and we got access! Run this through [CrackStation](https://crackstation.net/) shows the password is gobucks. Now, run the $auth command with the gobucks password, and you'll be added to the authbot-flag challenge on the discord. Congrats!
+Whoops, looks like they were logging password hashes, and we got access! Run this through [CrackStation](https://crackstation.net/) shows the password is gobucks. Now, run the `$auth` command with the gobucks password, and you'll be added to the authbot-flag challenge on the discord. Congrats!
 
 -----
 
@@ -398,20 +398,22 @@ But you can actually flip the image vertically to get a better view. After that,
 
 Challenge: authbot
 Write-Up Author: ctf-user-017
-First off, I dm'd authbot $help. This brought up a menu with possible commands like:  
+First off, I dm'd authbot `$help`. This brought up a menu with possible commands like:
+```
 $ping  
 $coinflip  
 $auth  
 $help  
 $info  
+```
 
-I tried $info and got the message:  
+I tried `$info` and got the message:  
 
 I'm a super cool authentication bot  
 Source code: https://github.com/qxxxb/auth_bot  
   
-Going to that Github link leads us to custom authbot code with a list of all the commands plus one extra command: debug_log  
-running $debug_log gets us this message  
+Going to that Github link leads us to custom authbot code with a list of all the commands plus one extra command: `debug_log`  
+running `$debug_log` gets us this message  
 
 2020-10-23 23:39:08 INFO     Logged in as authbot#4452
 2020-10-23 23:39:13 DEBUG    User ath0#0294 authed as admin with password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
@@ -425,7 +427,7 @@ running $debug_log gets us this message
 2020-10-24 01:44:32 DEBUG    User coltsaw#3495 authed as admin with password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
 
 The same hash (c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34) gets admin access over and over. We learn it's a sha-256 hash in the github code. Typing in this hash into an online tool to decrypt sha256 hashes gets us the password: gobucks.  
-Now if we do $auth gobucks, we are authenticated as "admins" on the Buckeye CTF server. A new channel pops up with the flag in it.  
+Now if we do `$auth gobucks`, we are authenticated as "admins" on the Buckeye CTF server. A new channel pops up with the flag in it.  
 osuctf{d0n7_lOG_y0UR_Au7h_57r1Ngs}
 
 
@@ -564,7 +566,7 @@ Challenge: debugger
 Write-Up Author: ctf-user-077
 debugger by WCSC
 
-If you download pwndbg, this is even easier, as the flag will show up immediately when you place the breakpoint. First, open the program in gdb. Type run. Next, run disass main to dissassemble the program. You can see the call to memset, which is the function that clears memory. This occurs at memory address  0x400647. Run b \*400647 to place a breakpoint, and run the program again. In pwndbg, you'll see the beginning of the flag in the dissassembly and on the stack.  You can now print the flag by printing the top of the stack: x/s $rsp
+If you download pwndbg, this is even easier, as the flag will show up immediately when you place the breakpoint. First, open the program in gdb. Type run. Next, run disass main to dissassemble the program. You can see the call to memset, which is the function that clears memory. This occurs at memory address  0x400647. Run b \*400647 to place a breakpoint, and run the program again. In pwndbg, you'll see the beginning of the flag in the dissassembly and on the stack.  You can now print the flag by printing the top of the stack: x/s `$rsp`
 
 
 
@@ -651,7 +653,7 @@ for i in [87, 75, 77, 91, 76, 94, 67, 90, 74, 77, 76, 77, 75, 103, 84, 8, 78, 93
 
 Challenge: authbot
 Write-Up Author: ctf-user-115
-If we look at the code, we see a hidden option that isn't listed on running $help: `$debug_log`
+If we look at the code, we see a hidden option that isn't listed on running `$help`: `$debug_log`
 
 If we run that we get:
 ```
@@ -1017,14 +1019,16 @@ Challenge: authbot
 Write-Up Author: ctf-user-029
 Beginner: authbot
 I've first tried all the commands for the authbot.
+```
 $ping
 $coinflip
 $auth
 $help
 $info
-A link to github was given in $info (https://github.com/qxxxb/auth_bot).
+```
+A link to github was given in `$info` (https://github.com/qxxxb/auth_bot).
 I looked at the link for the auth function (line 110) and i realised that i need the value for the variable cipher, which is in sha256.
-I also realised that there is a debug_log function that isn't given in discord. Thus, i called the function and it gave the password password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34. I went over to http://reverse-hash-lookup.online-domain-tools.com/ and deciphered the password with sha256 and got the password gobucks. Then i $auth gobucks and was authenticated as the admin and went to the auth-bot flag in BuckeyeCTF to get the flag
+I also realised that there is a debug_log function that isn't given in discord. Thus, i called the function and it gave the password password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34. I went over to http://reverse-hash-lookup.online-domain-tools.com/ and deciphered the password with sha256 and got the password gobucks. Then i `$auth` gobucks and was authenticated as the admin and went to the auth-bot flag in BuckeyeCTF to get the flag
 
 
 -----
@@ -1086,14 +1090,16 @@ Began by uploading the pwn file and opening it with gdb. Began by opening the .c
 
 Challenge: authbot
 Write-Up Author: ctf-user-082
-Start with $help in a dm to the AuthBot,  Gave us 
+Start with `$help` in a dm to the AuthBot,  Gave us 
 
+```
 $ping
 $coinflip
 $auth
 $help
 $info
-I then typed $info and navigated to the gitHub. After reviewing the files I scrolled down to the bottom and noticed a command $debug_log. So I typed that and got 
+```
+I then typed `$info` and navigated to the gitHub. After reviewing the files I scrolled down to the bottom and noticed a command `$debug_log`. So I typed that and got 
 
 2020-10-23 23:39:08 INFO    
 Logged in as authbot#4452
@@ -1107,7 +1113,7 @@ c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
 2020-10-24 00:05:53 DEBUG    User tips48#3559 authed as admin with password hash
 c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
 
-Pretty much password hashes were stored here. So I used https://crackstation.net/ and input the password hash. This gave the password gobucks. I then used $auth gobucks to give me the authentication role, which gave access to the #authbot-flag channel where the flag was/
+Pretty much password hashes were stored here. So I used https://crackstation.net/ and input the password hash. This gave the password gobucks. I then used `$auth` gobucks to give me the authentication role, which gave access to the #authbot-flag channel where the flag was/
 
 -----
 

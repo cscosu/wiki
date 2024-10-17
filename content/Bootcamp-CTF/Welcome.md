@@ -67,13 +67,11 @@ You'll learn in-demand skills that could lead to a career in cybersecurity. Even
 Ohio State University students are also eligible for prizes. **Prizes are while supplies last.**
 
 Students who receive at least 250 points in the CTF will receive a sticker (100 available):
-![sticker.png](/sticker.png)
+
+<img src="/sticker.png" alt="sticker" style="width: 30%;"/>
 
 Students who receive at least 500 points in the CTF will receive a coin (50 available):
 ![coin.png](/coin.png)
-
-Students who receive at least 1000 points in the CTF will receive a T-shirt (30 available):
-![shirt_design_front.png](/shirt_design_front.png) ![shirt_design_back.png](/shirt_design_back.png)
 
 ## Is this legal?
 
