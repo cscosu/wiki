@@ -2,13 +2,17 @@
 title: Meeting History
 description: 
 published: true
-date: 2024-09-03T14:20:16.575Z
+date: 2025-09-17T14:20:16.575Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-27T02:40:49.730Z
 ---
 
 # Meetings
+[Autumn 2025](/Meeting-Schedule/AU25)
+
+[Spring 2025](/Meeting-Schedule/SP25)
+
 [Autumn 2024](/Meeting-Schedule/AU24)
 
 [Spring 2024](/Meeting-Schedule/SP24)

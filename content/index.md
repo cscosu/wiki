@@ -9,7 +9,7 @@ description: Welcome to the Cyber Security Club at Ohio State University! We are
   <img src="/word-logo-white-red.png" alt="OSU Cyber Security Club" class="light-hide"/>
   
   <p style="font-weight: bold; font-size: 25pt;">
-    <a href="/Meeting-Schedule/AU24">Meetings</a> |
+    <a href="/Meeting-Schedule/AU25">Meetings</a> |
     <a href="/Bootcamp-CTF/">Bootcamp</a> | 
     <a href="/resources/">Resources</a>
   </p>
