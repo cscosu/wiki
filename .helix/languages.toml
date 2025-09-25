@@ -1,0 +1,9 @@
+# ~/.helix/languages.toml
+
+[[language]]
+name = "markdown"
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--parser", "markdown"]
