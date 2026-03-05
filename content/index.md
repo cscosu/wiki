@@ -4,13 +4,13 @@ description: Welcome to the Cyber Security Club at Ohio State University! We are
 ---
 
 <div style="text-align: center;">
- 
+
   <img src="/word-logo-black-red.png" alt="OSU Cyber Security Club" class="dark-hide"/>
   <img src="/word-logo-white-red.png" alt="OSU Cyber Security Club" class="light-hide"/>
   
   <p style="font-weight: bold; font-size: 25pt;">
-    <a href="/Meeting-Schedule/AU25">Meetings</a> |
-    <a href="/Bootcamp-CTF/">Bootcamp</a> | 
+    <a href="/Meeting-Schedule/SP26">Meetings</a> |
+    <a href="/Bootcamp-CTF/">Bootcamp</a> |
     <a href="/resources/">Resources</a>
   </p>
 

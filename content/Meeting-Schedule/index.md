@@ -9,6 +9,9 @@ dateCreated: 2021-03-27T02:40:49.730Z
 ---
 
 # Meetings
+
+[Spring 2025](/Meeting-Schedule/SP26)
+
 [Autumn 2025](/Meeting-Schedule/AU25)
 
 [Spring 2025](/Meeting-Schedule/SP25)
