@@ -102,7 +102,11 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
 
         // Add current slug to full path
         currentPath = joinSegments(currentPath, slugParts[i])
-        const includeTrailingSlash = !isTagPath || i < 1
+        // This was causing bugs. Later we can implement a better check to see if we are looking at a folder or an md file.
+        // when looking at a folder this will change root down one directory.
+        // alternative is to leave false and throw 302's for pages that are never intended to be hit
+        //const includeTrailingSlash = !isTagPath || i < 1
+        const includeTrailingSlash = false
 
         // Format and add current crumb
         const crumb = formatCrumb(
