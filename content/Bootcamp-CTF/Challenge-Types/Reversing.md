@@ -29,4 +29,4 @@ The tools you will use often depend heavily on the challenge.
   
 - Tools for dynamic (runtime) analysis 
   - https://frida.re/ - Frida is a multi-purpose, multi-platform tool which allows you to inspect and interact with applications at runtime. It supports Windows, macOS, GNU/Linux, iOS, Android, and more. It comes with a powerful scripting API.
-  - GDB - `gdb` is a popular debugger, usually used for native linux applications. [More information](https://phoenix.goucher.edu/~kelliher/s2016/cs311/gdb-tutorial-handout.pdf). It is useful for setting breakpoints, stepping through parts of a program, and you can even modify a program's behavior at runtime.
+  - GDB - `gdb` is a popular debugger, usually used for native linux applications. [More information](https://www.geeksforgeeks.org/c/gdb-step-by-step-introduction/). It is useful for setting breakpoints, stepping through parts of a program, and you can even modify a program's behavior at runtime.
